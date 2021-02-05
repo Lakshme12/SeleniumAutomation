@@ -1,0 +1,27 @@
+package seleniumjava;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+public class Disable {
+//demo21
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\programms\\selenium\\webdriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver(); 
+		
+		driver.get("https://www.spicejet.com/");
+		
+		Thread.sleep(3000);
+		//System.out.println(driver.findElement(By.cssSelector("#ctl00_HyperLinkLogin")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.cssSelector("#ctl00_HyperLinkLogin")).isDisplayed());
+		Assert.assertTrue(true);
+		
+		//System.out.println(driver.findElement(By.xpath("//input[@name='ctl00$mainContent$view_date2']")).isEnabled());
+		driver.quit();
+
+	}
+
+}

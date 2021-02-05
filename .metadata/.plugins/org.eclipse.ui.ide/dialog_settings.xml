@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\eclipse\programms\TestNG"/>
+			<item value="C:\Users\Lakshme\eclipse-workspace\TestNg"/>
+			<item value="C:\Users\Lakshme\eclipse-workspace\javaProgramms"/>
+			<item value="C:\Users\Lakshme\eclipse-workspace\accessspecifier"/>
+			<item value="C:\Users\Lakshme\eclipse-workspace\SeleniumAutomation"/>
+			<item value="C:\Users\Lakshme\eclipse-workspace\selenium"/>
+			<item value="C:\eclipse\javaFiles\javaProgramms"/>
+			<item value="C:\eclipse\javaFiles\accessspecifier"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

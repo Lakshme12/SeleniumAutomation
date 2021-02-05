@@ -1,0 +1,82 @@
+package seleniumJavaHome;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BookApp {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\programms\\selenium\\webdriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.makemytrip.com/");
+		//driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
+		Thread.sleep(15000);
+		
+		//driver.findElement(By.xpath("//label[text()='Login with Phone/Email']")).click();
+		//Thread.sleep(5000);
+		/*
+		driver.findElement(By.cssSelector("#username")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#username")).clear();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#username")).sendKeys("lakshmetn@gmail.com");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//span[text()='Continue']")).click();
+		
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input#password")).sendKeys("123456L!");
+		Thread.sleep(4000);
+		
+		driver.findElement(By.xpath("//span[@data-cy='modalClose']")).click();
+		Thread.sleep(5000);
+		
+		driver.findElement(By.cssSelector("div.ctrySelect")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//span[@class='countryName'])[2]")).click();
+		Thread.sleep(2000);
+		
+		//Assert.assertEquals(driver.findElement(By.cssSelector("div.ctrySelect")).getText(), "UAE");
+		
+		//Thread.sleep(4000);
+		
+driver.findElement(By.cssSelector("#fromCity")).click();
+		
+		driver.findElement(By.xpath("//p[contains(text(), 'Mumbai')]")).click();
+		
+		driver.findElement(By.cssSelector("#toCity")).click();
+		
+		driver.findElement(By.xpath("//p[text()='Delhi, India']")).click();
+		
+		driver.findElement(By.xpath("//label[@for='departure']")).click();
+		
+		driver.findElement(By.xpath("//div[@aria-label='Fri Feb 05 2021']")).click();
+		
+		System.out.print(driver.findElement(By.xpath("//p[contains(text(), 'Mumbai')]")).getText()+" To "+
+				driver.findElement(By.xpath("//p[text()='Delhi, India']")).getText() +" On "+
+				driver.findElement(By.xpath("//div[@aria-label='Fri Feb 05 2021']")).getText());
+		
+		driver.quit();
+		
+		driver.quit();
+
+	}
+
+}
+
+
+	
+
+

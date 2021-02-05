@@ -1,0 +1,60 @@
+package seleniumJavaHome;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BookApp {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\programms\\selenium\\webdriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.makemytrip.com/");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
+		Thread.sleep(15000);
+		
+		//driver.findElement(By.xpath("//label[text()='Login with Phone/Email']")).click();
+		//Thread.sleep(5000);
+		
+		driver.findElement(By.cssSelector("#username")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#username")).clear();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#username")).sendKeys("lakshmetn@gmail.com");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//span[text()='Continue']")).click();
+		
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input#password")).sendKeys("123456L!");
+		Thread.sleep(4000);
+		
+		driver.findElement(By.xpath("//span[@data-cy='modalClose']")).click();
+		Thread.sleep(5000);
+		
+		driver.findElement(By.cssSelector("div.ctrySelect")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//span[@class='countryName'])[2]")).click();
+		Thread.sleep(2000);
+		
+		//Assert.assertEquals(driver.findElement(By.cssSelector("div.ctrySelect")).getText(), "UAE");
+		
+		//Thread.sleep(4000);
+		driver.quit();
+
+	}
+
+}
+
+
+	
+
+
